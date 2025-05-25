@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Helper Pro - Tối ưu SEO cho Google Docs</title>
+    <meta name="description" content="Add-on Google Docs giúp phân tích và tối ưu SEO content một cách chuyên nghiệp với keyword density, readability score, và nhiều tính năng khác.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .features {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .screenshots {
+            padding: 4rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .screenshots h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .screenshot-placeholder {
+            background: #ecf0f1;
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+        }
+
+        .how-to-use {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .how-to-use h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .features h2, .screenshots h2, .how-to-use h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SEO Helper Pro</div>
+                <ul class="nav-menu">
+                    <li><a href="#features">Tính năng</a></li>
+                    <li><a href="#screenshots">Demo</a></li>
+                    <li><a href="guide.html">Hướng dẫn</a></li>
+                    <li><a href="privacy.html">Chính sách</a></li>
+                    <li><a href="terms.html">Điều khoản</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Phân Tích SEO Chuyên Nghiệp</h1>
+            <p>Add-on Google Docs giúp bạn tối ưu nội dung SEO với phân tích keyword density, readability score, cấu trúc heading và nhiều tính năng khác.</p>
+            <a href="https://workspace.google.com/marketplace" class="cta-button">Cài Đặt Miễn Phí</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Tính Năng Nổi Bật</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Phân Tích Keyword Density</h3>
+                    <p>Tính toán mật độ từ khóa chính xác, đưa ra gợi ý tối ưu để tránh spam và đảm bảo SEO hiệu quả.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Readability Score</h3>
+                    <p>Đánh giá độ dễ đọc nội dung theo thang điểm Flesch, giúp tối ưu trải nghiệm người dùng.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏗️</div>
+                    <h3>Phân Tích Cấu Trúc Heading</h3>
+                    <p>Kiểm tra cấu trúc H1, H2, H3 và từ khóa trong các heading để tối ưu SEO on-page.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Phân Tích Link Structure</h3>
+                    <p>Đánh giá internal links và external links, phân biệt domain để tối ưu link building.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Highlight Từ Khóa</h3>
+                    <p>Tự động highlight từ khóa trong document để dễ dàng kiểm tra và chỉnh sửa.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>SEO Template</h3>
+                    <p>Chèn sẵn template SEO checklist và meta tags để không bỏ sót yếu tố quan trọng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <h2>Giao Diện Sử Dụng</h2>
+            <div class="screenshot-placeholder">
+                Screenshot của SEO Helper Pro sidebar sẽ hiển thị ở đây
+            </div>
+            <div class="screenshot-placeholder">
+                Screenshot của báo cáo phân tích SEO chi tiết sẽ hiển thị ở đây
+            </div>
+        </div>
+    </section>
+
+    <section class="how-to-use">
+        <div class="container">
+            <h2>Cách Sử Dụng Nhanh</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Cài Đặt Add-on</h3>
+                    <p>Tìm "SEO Helper Pro" trong Google Workspace Marketplace và cài đặt.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Mở SEO Helper</h3>
+                    <p>Trong Google Docs, vào menu Add-ons > SEO Helper Pro > Mở SEO Helper.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Nhập Từ Khóa</h3>
+                    <p>Nhập từ khóa chính và cấu hình settings theo nhu cầu.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Phân Tích & Tối Ưu</h3>
+                    <p>Nhấn "Phân tích SEO" để nhận báo cáo và gợi ý chi tiết.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="guide.html" class="cta-button">Xem Hướng Dẫn Chi Tiết</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sản Phẩm</h3>
+                    <ul>
+                        <li><a href="#features">Tính năng</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="guide.html">Hướng dẫn chi tiết</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Hỗ Trợ</h3>
+                    <ul>
+                        <li><a href="mailto:support@seohelper.pro">Email hỗ trợ</a></li>
+                        <li><a href="guide.html#faq">FAQ</a></li>
+                        <li><a href="guide.html#video">Video hướng dẫn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Pháp Lý</h3>
+                    <ul>
+                        <li><a href="privacy.html">Chính sách bảo mật</a></li>
+                        <li><a href="terms.html">Điều khoản sử dụng</a></li>
+                        <li><a href="mailto:contact@seohelper.pro">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SEO Helper Pro. Được phát triển tại Việt Nam.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
