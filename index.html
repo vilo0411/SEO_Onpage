@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO Helper Pro - Tối ưu SEO cho Google Docs</title>
+    <title>SEO Onpage - Tối ưu SEO cho Google Docs</title>
     <meta name="description" content="Add-on Google Docs giúp phân tích và tối ưu SEO content một cách chuyên nghiệp với keyword density, readability score, và nhiều tính năng khác.">
     <style>
         * {
@@ -152,7 +152,6 @@
 
         .screenshot-placeholder {
             background: #ecf0f1;
-            height: 400px;
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -160,6 +159,175 @@
             color: #7f8c8d;
             font-size: 1.2rem;
             margin: 2rem 0;
+            min-height: 400px;
+            padding: 20px;
+        }
+
+        .screenshot-placeholder img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-placeholder img:hover {
+            transform: scale(1.02);
+        }
+
+        .mockup-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mockup-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+        }
+
+        .mockup-header::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            box-shadow: 20px 0 rgba(255,255,255,0.3), 40px 0 rgba(255,255,255,0.3);
+        }
+
+        .mockup-content {
+            padding: 30px;
+            background: #fafbfc;
+        }
+
+        .seo-form {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .analyze-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+        }
+
+        .analyze-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .results-section {
+            margin-top: 25px;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f3f4;
+        }
+
+        .metric:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .metric-value {
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .metric-good {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .metric-warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .metric-danger {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .suggestions {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .suggestions h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .suggestions ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .suggestions li {
+            margin-bottom: 5px;
         }
 
         .how-to-use {
@@ -250,17 +418,41 @@
                 flex-direction: column;
                 gap: 1rem;
             }
-            
+
             .hero h1 {
                 font-size: 2rem;
             }
-            
+
             .hero p {
                 font-size: 1.1rem;
             }
-            
+
             .features h2, .screenshots h2, .how-to-use h2 {
                 font-size: 2rem;
+            }
+
+            .mockup-content {
+                padding: 20px;
+            }
+
+            .seo-form, .results-section {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mockup-content {
+                padding: 15px;
+            }
+
+            .seo-form, .results-section {
+                padding: 15px;
+            }
+
+            .metric {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
             }
         }
     </style>
@@ -269,7 +461,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">SEO Helper Pro</div>
+                <div class="logo">SEO Onpage</div>
                 <ul class="nav-menu">
                     <li><a href="#features">Tính năng</a></li>
                     <li><a href="#screenshots">Demo</a></li>
@@ -331,10 +523,62 @@
         <div class="container">
             <h2>Giao Diện Sử Dụng</h2>
             <div class="screenshot-placeholder">
-                Screenshot của SEO Helper Pro sidebar sẽ hiển thị ở đây
-            </div>
-            <div class="screenshot-placeholder">
-                Screenshot của báo cáo phân tích SEO chi tiết sẽ hiển thị ở đây
+                <div class="mockup-container">
+                    <div class="mockup-header">
+                        SEO Onpage - Sidebar Analysis
+                    </div>
+                    <div class="mockup-content">
+                        <div class="seo-form">
+                            <div class="form-group">
+                                <label for="keyword">Từ khóa chính:</label>
+                                <input type="text" id="keyword" value="tối ưu SEO Google Docs" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="secondary">Từ khóa phụ:</label>
+                                <input type="text" id="secondary" value="add-on SEO, keyword density" readonly>
+                            </div>
+                            <button class="analyze-btn">🔍 Phân Tích SEO</button>
+                        </div>
+                        
+                        <div class="results-section">
+                            <h4 style="margin-bottom: 15px; color: #2c3e50;">📊 Kết Quả Phân Tích</h4>
+                            
+                            <div class="metric">
+                                <span class="metric-label">Keyword Density</span>
+                                <span class="metric-value metric-good">2.3%</span>
+                            </div>
+                            
+                            <div class="metric">
+                                <span class="metric-label">Readability Score</span>
+                                <span class="metric-value metric-warning">65/100</span>
+                            </div>
+                            
+                            <div class="metric">
+                                <span class="metric-label">Heading Structure</span>
+                                <span class="metric-value metric-good">Tốt</span>
+                            </div>
+                            
+                            <div class="metric">
+                                <span class="metric-label">Word Count</span>
+                                <span class="metric-value metric-good">1,247</span>
+                            </div>
+                            
+                            <div class="metric">
+                                <span class="metric-label">Internal Links</span>
+                                <span class="metric-value metric-danger">2</span>
+                            </div>
+                            
+                            <div class="suggestions">
+                                <h4>💡 Gợi Ý Tối Ưu</h4>
+                                <ul>
+                                    <li>Tăng số lượng internal links (tối thiểu 5-7)</li>
+                                    <li>Cải thiện readability bằng cách viết câu ngắn hơn</li>
+                                    <li>Thêm từ khóa phụ vào H2, H3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -346,12 +590,12 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Cài Đặt Add-on</h3>
-                    <p>Tìm "SEO Helper Pro" trong Google Workspace Marketplace và cài đặt.</p>
+                    <p>Tìm "SEO Onpage" trong Google Workspace Marketplace và cài đặt.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Mở SEO Helper</h3>
-                    <p>Trong Google Docs, vào menu Add-ons > SEO Helper Pro > Mở SEO Helper.</p>
+                    <p>Trong Google Docs, vào menu Add-ons > SEO Onpage > Mở SEO Helper.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
@@ -384,7 +628,7 @@
                 <div class="footer-section">
                     <h3>Hỗ Trợ</h3>
                     <ul>
-                        <li><a href="mailto:support@seohelper.pro">Email hỗ trợ</a></li>
+                        <li><a href="mailto:nvloc0411@gmail.com">Email hỗ trợ</a></li>
                         <li><a href="guide.html#faq">FAQ</a></li>
                         <li><a href="guide.html#video">Video hướng dẫn</a></li>
                     </ul>
@@ -394,12 +638,12 @@
                     <ul>
                         <li><a href="privacy.html">Chính sách bảo mật</a></li>
                         <li><a href="terms.html">Điều khoản sử dụng</a></li>
-                        <li><a href="mailto:contact@seohelper.pro">Liên hệ</a></li>
+                        <li><a href="mailto:nvloc0411@gmail.com">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 SEO Helper Pro. Được phát triển tại Việt Nam.</p>
+                <p>&copy; 2025 SEO Onpage. Được phát triển tại Việt Nam.</p>
             </div>
         </div>
     </footer>

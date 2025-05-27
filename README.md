@@ -1,4 +1,4 @@
-# SEO Helper Pro
+# SEO_Onpage
 
 🚀 **Tối ưu SEO Content trong Google Docs một cách chuyên nghiệp**
 
@@ -8,9 +8,9 @@
 
 ## 📋 Giới thiệu
 
-SEO Helper Pro là add-on Google Docs giúp content creator và SEO specialist phân tích và tối ưu nội dung SEO một cách chuyên nghiệp. Với giao diện thân thiện và các tính năng mạnh mẽ, bạn có thể cải thiện chất lượng SEO ngay trong quá trình viết content.
+SEO_Onpage là add-on Google Docs giúp content creator và SEO specialist phân tích và tối ưu nội dung SEO một cách chuyên nghiệp. Với giao diện thân thiện và các tính năng mạnh mẽ, bạn có thể cải thiện chất lượng SEO ngay trong quá trình viết content.
 
-### 🎯 Tại sao chọn SEO Helper Pro?
+### 🎯 Tại sao chọn SEO_Onpage?
 
 - ⚡ **Phân tích real-time** - Kết quả ngay lập tức
 - 🎯 **Chính xác cao** - Thuật toán tối ưu cho tiếng Việt
@@ -54,7 +54,7 @@ SEO Helper Pro là add-on Google Docs giúp content creator và SEO specialist p
 
 ### Từ Google Workspace Marketplace
 1. Mở [Google Workspace Marketplace](https://workspace.google.com/marketplace)
-2. Tìm kiếm "SEO Helper Pro"
+2. Tìm kiếm "SEO_Onpage"
 3. Click **Install** và cấp quyền cần thiết
 4. Mở Google Docs và enjoy! 🎉
 
@@ -69,7 +69,7 @@ SEO Helper Pro là add-on Google Docs giúp content creator và SEO specialist p
 ### Bắt đầu nhanh
 ```
 1. Mở Google Docs
-2. Add-ons → SEO Helper Pro → Mở SEO Helper
+2. Add-ons → SEO_Onpage → Mở SEO Onpage
 3. Nhập từ khóa chính
 4. Click "Phân tích SEO"
 5. Xem kết quả và áp dụng gợi ý
@@ -134,7 +134,7 @@ SEO Helper Pro là add-on Google Docs giúp content creator và SEO specialist p
 - ✅ **Tuân thủ GDPR** và privacy regulations
 
 ### Quyền truy cập
-SEO Helper Pro chỉ yêu cầu quyền tối thiểu:
+SEO Onpage chỉ yêu cầu quyền tối thiểu:
 - Đọc nội dung document đang mở
 - Chỉnh sửa để highlight và chèn template
 - Hiển thị sidebar UI
@@ -172,9 +172,9 @@ Có ý tưởng tính năng mới? [Liên hệ với chúng tôi](mailto:feature
 - ⚖️ **Legal**: [legal@seohelper.pro](mailto:legal@seohelper.pro)
 
 ### Tài liệu
-- 📖 [Hướng dẫn chi tiết](https://seohelper.pro/guide.html)
-- 🔒 [Chính sách bảo mật](https://seohelper.pro/privacy.html)
-- ⚖️ [Điều khoản sử dụng](https://seohelper.pro/terms.html)
+- 📖 [Hướng dẫn chi tiết](https://vilo0411.github.io/SEO_Onpage//guide.html)
+- 🔒 [Chính sách bảo mật](https://vilo0411.github.io/SEO_Onpage//privacy.html)
+- ⚖️ [Điều khoản sử dụng](https://vilo0411.github.io/SEO_Onpage//terms.html)
 
 ### Community
 - 💬 **Discord**: [Join our community](https://discord.gg/seohelper)
@@ -200,7 +200,7 @@ Có ý tưởng tính năng mới? [Liên hệ với chúng tôi](mailto:feature
 ```
 MIT License
 
-Copyright (c) 2025 SEO Helper Pro
+Copyright (c) 2025 SEO Onpage
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -226,7 +226,7 @@ SOFTWARE.
 ### Phát triển bởi
 - 👨‍💻 **Lead Developer**: [Tên của bạn]
 - 🎨 **UI/UX Design**: [Tên designer nếu có]
-- 📝 **Content**: SEO Helper Pro Team
+- 📝 **Content**: SEO Onpage Team
 
 ### Công nghệ sử dụng
 - ⚡ Google Apps Script
@@ -242,9 +242,11 @@ SOFTWARE.
 
 ---
 
-**⭐ Nếu SEO Helper Pro hữu ích, hãy cho chúng tôi một star! ⭐**
+<div align="center">
 
-[🚀 Cài đặt ngay](https://workspace.google.com/marketplace) | [📖 Tài liệu](https://seohelper.pro) | [💬 Hỗ trợ](mailto:support@seohelper.pro)
+**⭐ Nếu SEO Onpage hữu ích, hãy cho chúng tôi một star! ⭐**
+
+[🚀 Cài đặt ngay](https://workspace.google.com/marketplace) | [📖 Tài liệu](https://vilo0411.github.io/SEO_Onpage/) | [💬 Hỗ trợ](mailto:support@seohelper.pro)
 
 ---
 
